@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Jakub Pleban - Projects</title>
+    <style>
+        /* Simple Grid Layout for Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Automatically adjusts number of columns based on screen size */
+            gap: 20px;
+            padding: 20px;
+        }
+        .project-card {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: left;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+        /* Image inside project card */
+        .project-card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="top-navigation-name">
+                <p>Jakub Pleban</p>
+            </div>
+            <div class="top-navigation-main">
+                <nav class="main-nav">
+                    <ul id="navigation-list">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./projects.html">Projects</a></li>
+                        <li><a href="./resume.html">Resume</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="search-button">
+                    SEARCH BAR
+                </div>
+                <div class="view-mode">
+                    DAY/NIGHT VIEW
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-body">
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <a href="project1.html">
+                <div class="project-card">
+                    <img src="./Files/Pictures/test1.jpg" alt="Project 1 Image"> <!-- Add image here -->
+                    <h3>Project 1</h3>
+                    <p>Brief description of the project</p>
+                </div>
+            </a>
+
+            <!-- Project 2 -->
+            <a href="project2.html">
+                <div class="project-card">
+                    <img src="./Files/Pictures/test1.jpg" alt="Project 2 Image"> <!-- Add image here -->
+                    <h3>Project 2</h3>
+                    <p>Brief description of the project</p>
+                </div>
+            </a>
+
+            <!-- Project 3 -->
+            <a href="project3.html">
+                <div class="project-card">
+                    <img src="./Files/Pictures/test1.jpg" alt="Project 3 Image"> <!-- Add image here -->
+                    <h3>Project 3</h3>
+                    <p>Brief description of the project</p>
+                </div>
+            </a>
+
+            <!-- More Projects can go here -->
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-media-list">
+            <a href="https://www.linkedin.com/in/jakub-pleban/" class="social-media-link">LinkedIn</a>
+            <a href="https://github.com/TheH3rmit" class="social-media-link">GitHub</a>
+        </div>
+        <div class="copyright-notice">
+            <p>© 2024 Jakub Pleban. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

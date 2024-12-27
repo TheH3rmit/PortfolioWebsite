@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Jakub Pleban - Contact</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="top-navigation-name">
+                <p>Jakub Pleban</p>
+            </div>
+            <div class="top-navigation-main">
+                <nav class="main-nav">
+                    <ul id="navigation-list">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./projects.html">Projects</a></li>
+                        <li><a href="./resume.html">Resume</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="search-button">
+                    SEARCH BAR
+                </div>
+                <div class="view-mode">
+                    DAY/NIGHT VIEW
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-body">
+        <div class="contact-form-container">
+            <h2>Contact Me</h2>
+            <form id="contactForm" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" id="submitButton">Send Message</button>
+            </form>
+            <div id="formFeedback"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-media-list">
+            <a href="https://www.linkedin.com/in/jakub-pleban/" class="social-media-link">Linkedin</a>
+            <a href="https://github.com/TheH3rmit" class="social-media-link">Github</a>
+        </div>
+        <div class="copyright-notice">
+            <p> © 2024 Jakub Pleban. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Contact form validation and submission logic
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            // Get values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Validation check
+            if (name && email && message) {
+                // Display success
+                document.getElementById('formFeedback').innerHTML = "<p class='success'>Your message has been sent successfully!</p>";
+                document.getElementById('contactForm').reset();  // Reset form 
+            } else {
+                // Display fail 
+                document.getElementById('formFeedback').innerHTML = "<p class='error'>Please fill in all fields.</p>";
+            }
+        });
+    </script>
+</body>
+</html>

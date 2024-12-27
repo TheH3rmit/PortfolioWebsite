@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Jakub Pleban - Resume</title>
+    <!-- Include PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="top-navigation-name">
+                <p>Jakub Pleban</p>
+            </div>
+            <div class="top-navigation-main">
+                <nav class="main-nav">
+                    <ul id="navigation-list">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./projects.html">Projects</a></li>
+                        <li><a href="./resume.html">Resume</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="search-button">
+                    SEARCH BAR
+                </div>
+                <div class="view-mode">
+                    DAY/NIGHT VIEW
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-body">
+        <div class="resume-container">
+            <h2>My Resume</h2>
+
+            <!-- Canvas for PDF rendering -->
+            <canvas class="pdf-canvas"></canvas>
+            
+            <!-- Download Button -->
+            <a href="./Files/Jakub_Resume-2.pdf" download="Jakub_Pleban_Resume.pdf">
+                <button>Download Resume</button>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-media-list">
+            <a href="https://www.linkedin.com/in/jakub-pleban/" class="social-media-link">LinkedIn</a>
+            <a href="https://github.com/TheH3rmit" class="social-media-link">GitHub</a>
+        </div>
+        <div class="copyright-notice">
+            <p>© 2024 Jakub Pleban. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Path to your PDF file
+        const url = './Files/Jakub_Resume-2.pdf';
+
+        // Get the canvas element
+        const canvas = document.querySelector('.pdf-canvas');
+        const context = canvas.getContext('2d');
+
+        // Load the PDF document using PDF.js
+        pdfjsLib.getDocument(url).promise.then(pdf => {
+            // Get the first page of the PDF
+            pdf.getPage(1).then(page => {
+                // Set up the scale (zoom level) for rendering the page
+                const scale = 1.5;  // Adjust scale for desired zoom level
+                const viewport = page.getViewport({ scale: scale });
+
+                // Set the canvas size to match the PDF page size
+                canvas.width = viewport.width;
+                canvas.height = viewport.height;
+
+                // Render the page on the canvas
+                page.render({
+                    canvasContext: context,
+                    viewport: viewport
+                });
+            });
+        }).catch(error => {
+            console.error('Error loading PDF:', error);
+        });
+    </script>
+</body>
+</html>
