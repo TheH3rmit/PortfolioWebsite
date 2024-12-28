@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Jakub Pleban - Projects</title>
+    <script src="./JS/script.js" defer></script>
     <style>
-        /* Simple Grid Layout for Projects */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Automatically adjusts number of columns based on screen size */
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
             gap: 20px;
             padding: 20px;
         }
@@ -25,7 +26,6 @@
         .project-card:hover {
             transform: scale(1.05);
         }
-        /* Image inside project card */
         .project-card img {
             width: 100%;
             height: auto;
@@ -36,12 +36,15 @@
 <body>
     <header>
         <div class="container">
-            <div class="top-navigation-name">
-                <p>Jakub Pleban</p>
-            </div>
-            <div class="top-navigation-main">
+            <div class="top-navigation">
+                <div class="name">
+                    <p>Jakub Pleban</p>
+                </div>
                 <nav class="main-nav">
-                    <ul id="navigation-list">
+                    <button class="hamburger" aria-label="Toggle Navigation">
+                        &#9776;
+                    </button>
+                    <ul id="navigation-list" class="hidden">
                         <li><a href="./index.html">Home</a></li>
                         <li><a href="./about.html">About</a></li>
                         <li><a href="./projects.html">Projects</a></li>
@@ -50,11 +53,11 @@
                     </ul>
                 </nav>
                 <div class="search-button">
-                    SEARCH BAR
+                    <p>SEARCH BAR</p>
                 </div>
-                <div class="view-mode">
-                    DAY/NIGHT VIEW
-                </div>
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -64,7 +67,7 @@
             <!-- Project 1 -->
             <a href="project1.html">
                 <div class="project-card">
-                    <img src="./Files/Pictures/test1.jpg" alt="Project 1 Image"> <!-- Add image here -->
+                    <img src="./Files/Pictures/test1.jpg" alt="Project 1 Image"> 
                     <h3>Project 1</h3>
                     <p>Brief description of the project</p>
                 </div>
@@ -73,7 +76,7 @@
             <!-- Project 2 -->
             <a href="project2.html">
                 <div class="project-card">
-                    <img src="./Files/Pictures/test1.jpg" alt="Project 2 Image"> <!-- Add image here -->
+                    <img src="./Files/Pictures/test1.jpg" alt="Project 2 Image"> 
                     <h3>Project 2</h3>
                     <p>Brief description of the project</p>
                 </div>
@@ -82,13 +85,12 @@
             <!-- Project 3 -->
             <a href="project3.html">
                 <div class="project-card">
-                    <img src="./Files/Pictures/test1.jpg" alt="Project 3 Image"> <!-- Add image here -->
+                    <img src="./Files/Pictures/test1.jpg" alt="Project 3 Image"> 
                     <h3>Project 3</h3>
                     <p>Brief description of the project</p>
                 </div>
             </a>
 
-            <!-- More Projects can go here -->
         </div>
     </div>
 
