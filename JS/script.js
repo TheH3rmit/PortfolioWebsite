@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Day/Night view toggle
     themeToggle.addEventListener('click', () => {
-        const isDarkMode = body.classList.toggle('dark-mode');
+        const isDarkMode = body.classList.toggle('bright-mode');
         themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
     });
 });

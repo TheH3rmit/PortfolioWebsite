@@ -3,7 +3,6 @@
 ========================================== */
 * {
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,6 +20,7 @@ html {
 ========================================== */
 body {
     background-color: black;
+    color: white;
     width: 100%;
     line-height: 1.6;
 }
@@ -53,6 +53,7 @@ footer {
 ========================================== */
 .container {
     position: relative;
+    color: white;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -73,6 +74,7 @@ footer {
 ========================================== */
 .top-navigation {
     display: flex;
+    color: white;
     align-items: center;
     width: 100%;
     gap: 10px;
@@ -125,6 +127,7 @@ a {
 .search-button,
 .view-mode {
     flex-shrink: 0;
+
     font-size: 0.7rem;
 }
 
@@ -169,21 +172,25 @@ a {
 /* ========================================
    Dark Mode Styles
 ========================================== */
-body.dark-mode {
+body.bright-mode {
     background-color: white;
     color: black;
 }
 
-body.dark-mode header,
-body.dark-mode footer {
+body.bright-mode header,
+body.bright-mode footer {
     background-color: #eeeeee;
-}
-
-body.dark-mode a {
     color: black;
 }
 
-body.dark-mode .name,
-body.dark-mode .view-mode {
+body.bright-mode a {
+    color: black;
+}
+
+body.bright-mode .name,
+body.bright-mode .view-mode,
+body.bright-mode .hamburger,
+body.bright-mode .search-button,
+body.bright-mode .theme-toggle  {
     color: black;
 }
