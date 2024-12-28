@@ -1,0 +1,9 @@
+hamburger menu center and expand the header without destroying header - probabli not centering everything that is the fix
+day/night mode - to fix 
+contact me page - to fix
+resume center and download center
+fill with content
+    home
+    about
+    projects
+
