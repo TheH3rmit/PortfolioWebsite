@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Hamburger menu toggle
     hamburger.addEventListener("click", () => {
         header.classList.toggle("expanded"); // Toggle the expanded class to show/hide the menu
-        const navigationList = document.querySelector("#navigation-list2");
+        const navigationList = document.querySelector("#navigation-list-mobile");
         navigationList.classList.toggle("show"); // Toggle the visibility of the menu
     });
 
