@@ -13,6 +13,7 @@
 ========================================== */
 html {
     font-size: clamp(14px, 2vw, 20px);
+    
 }
 
 /* ========================================
@@ -35,6 +36,7 @@ header {
     overflow: hidden;
     z-index: 999;
     background-attachment: fixed;
+    font-weight: 600;
 }
 
 header.expanded {
@@ -171,6 +173,38 @@ a {
     color: #fff;
     cursor: pointer;
     font-size: 1rem;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+.search-button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px; /* Match the dimensions of the theme button */
+    height: 20px;
+}
+
+.search-button i {
+    font-size: 1rem; /* Ensure the icon matches the desired size */
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#div-search-button{
+    margin: 5px;
+}
+
+#div-theme-toggle{
+    margin: 5px;
 }
 
 /* Hamburger Menu */
@@ -181,14 +215,6 @@ a {
     border: none;
     color: white;
     cursor: pointer;
-}
-
-/* Search Button and View Mode */
-.search-button,
-.view-mode {
-    flex-shrink: 0;
-
-    font-size: 0.7rem;
 }
 
 /* ========================================
@@ -315,7 +341,8 @@ body.bright-mode .name,
 body.bright-mode .view-mode,
 body.bright-mode .hamburger,
 body.bright-mode .search-button,
-body.bright-mode .theme-toggle  {
+body.bright-mode .theme-toggle,
+body.bright-mode .search-button  {
     color: black;
 }
 
