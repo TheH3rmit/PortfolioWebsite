@@ -2,7 +2,7 @@
    General Reset and Base Styles
 ========================================== */
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -109,6 +109,42 @@ footer {
 
 #navigation-list-desktop li {
     margin: 0;
+    appearance: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 15px;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 30px;
+    min-width: 0;
+    outline: none;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+
+#navigation-list-desktop li:hover, 
+#navigation-list-desktop li:focus {
+    background-color: rgb(51, 51, 51); 
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+    outline: none; 
+}
+
+#navigation-list-desktop li:active {
+    box-shadow: none;
+    transform: translateY(0);
 }
 
 #navigation-list-mobile {
@@ -173,9 +209,10 @@ a {
     #navigation-list-mobile {
         display: none;
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
         text-align: center;
         width: 100%;
+        margin: 10px;
     }
 
     header.expanded #navigation-list-mobile {
@@ -209,6 +246,16 @@ a {
 ========================================== */
 body.bright-mode {
     background-color: white;
+    color: black;
+}
+
+body.bright-mode #navigation-list-desktop li:hover,
+body.bright-mode #navigation-list-desktop li:focus {
+    background-color: rgb(240, 240, 240);  
+}
+
+body.bright-mode .button-main-body{
+    background-color: rgb(240, 240, 240);
     color: black;
 }
 
@@ -260,3 +307,42 @@ table {
 }
 
 
+.button-main-body{
+    appearance: none;
+    background-color: rgb(26, 26, 26);    
+    border: 2px solid rgb(82, 82, 82);
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 10px;
+    min-height: 30px;
+    min-width: 0;
+    outline: none;
+    padding: 8px 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+.button-main-body:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+.button-main-body:active{
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.pdf-canvas{
+    border: solid 2px black;
+}

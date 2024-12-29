@@ -1,4 +1,5 @@
 header height jumps from 32 to 27 and then to 30
+search bar funcionality
 fill with content
     home
     about
