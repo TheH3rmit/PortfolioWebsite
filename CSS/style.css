@@ -33,7 +33,6 @@ header {
     width: 100%;
     clear: both;
     overflow: hidden;
-    transition: height 0.3s ease;
     z-index: 999;
     background-attachment: fixed;
 }
@@ -161,7 +160,6 @@ a {
 @media (max-width: 768px) {
     header {
         height: 50px;
-        transition: height 0.3s ease;
     }
 
     #navigation-list-desktop {
@@ -231,3 +229,34 @@ body.bright-mode .search-button,
 body.bright-mode .theme-toggle  {
     color: black;
 }
+
+/* ========================================
+   To Organize 
+========================================== */
+
+.contact-form-container {
+    display: flex; /* Enables flexbox for centering */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    text-align: center; /* Ensures the text is centered inside the container */
+    flex-direction: column;
+    margin: 10px;
+}
+
+table {
+    margin: 0 auto; /* Ensures fallback horizontal centering */
+    border-spacing: 10px; /* Optional: Adds spacing between table cells */
+    text-align: left;
+}
+
+
+.resume-container{
+    display: flex; /* Enables flexbox for centering */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    text-align: center; /* Ensures the text is centered inside the container */
+    flex-direction: column;
+    padding: 10px;
+}
+
+

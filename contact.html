@@ -19,13 +19,15 @@
                     <button class="hamburger" aria-label="Toggle Navigation">
                         &#9776;
                     </button>
-                    <ul id="navigation-list" class="hidden">
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./about.html">About</a></li>
-                        <li><a href="./projects.html">Projects</a></li>
-                        <li><a href="./resume.html">Resume</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
-                    </ul>
+                    <div class="main-nav-list-desktop">
+                        <ul id="navigation-list-desktop" class="hidden">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about.html">About</a></li>
+                            <li><a href="./projects.html">Projects</a></li>
+                            <li><a href="./resume.html">Resume</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
                 </nav>
                 <div class="search-button">
                     <p>SEARCH BAR</p>
@@ -33,6 +35,15 @@
                 <button id="theme-toggle" class="theme-toggle">
                     <i class="fas fa-moon"></i>
                 </button>
+            </div>
+            <div class="main-nav-list-mobile">
+                <ul id="navigation-list-mobile" class="hidden">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="./resume.html">Resume</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
             </div>
         </div>
     </header>
@@ -60,11 +71,10 @@
                             <td><textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea></td>
                         </div>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td><button type="submit" id="submitButton">Send Message</button></td>
-                    </tr>
                 </table>
+                <div id="submit-btn">
+                    <button type="submit" id="submitButton">Send Message</button>
+                </div>
             </form>
             <div id="formFeedback"></div>
         </div>

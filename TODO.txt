@@ -1,6 +1,5 @@
-hamburger menu center and expand the header without destroying header - probabli not centering everything that is the fix
-
-resume center and download center
+bright/dark mode not presistent 
+header height jumps from 32 to 27 and then to 30
 fill with content
     home
     about
