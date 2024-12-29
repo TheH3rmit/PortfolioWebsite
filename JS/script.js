@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
-    document.querySelectorAll('#navigation-list-moblie li').forEach(li => {
+    document.querySelectorAll('#navigation-list-mobile li').forEach(li => {
         li.addEventListener('click', () => {
             const anchor = li.querySelector('a');
             if (anchor) {
