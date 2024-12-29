@@ -26,4 +26,21 @@ document.addEventListener("DOMContentLoaded", () => {
         const navigationList = document.querySelector("#navigation-list-mobile");
         navigationList.classList.toggle("show"); // Toggle the visibility of the menu
     });
+
+    document.querySelectorAll('#navigation-list-desktop li').forEach(li => {
+        li.addEventListener('click', () => {
+            const anchor = li.querySelector('a');
+            if (anchor) {
+                anchor.click();
+            }
+        });
+    });
+    document.querySelectorAll('#navigation-list-moblie li').forEach(li => {
+        li.addEventListener('click', () => {
+            const anchor = li.querySelector('a');
+            if (anchor) {
+                anchor.click();
+            }
+        });
+    });
 });
