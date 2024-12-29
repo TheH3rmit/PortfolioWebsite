@@ -346,31 +346,61 @@ body.bright-mode .search-button  {
     color: black;
 }
 
+
+body.bright-mode #search-overlay {
+    background: rgba(255, 255, 255, 0.9); 
+}
+
+body.bright-mode .search-container {
+    background: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0); 
+}
+
+body.bright-mode #search-input {
+    background: #ffffff; 
+    color: rgb(255, 255, 255); 
+    border: 1px solid #ccc; 
+}
+
+body.bright-mode #search-results a {
+    background: #575757; 
+    color: rgb(255, 255, 255); 
+}
+
+body.bright-mode #search-results a:hover {
+    background: #777777; 
+}
+
+body.bright-mode .project-card-search{
+    background-color: #000000;
+}
+
+
 /* ========================================
    To Organize 
 ========================================== */
 
 .contact-form-container {
-    display: flex; /* Enables flexbox for centering */
-    align-items: center; /* Centers content vertically */
-    justify-content: center; /* Centers content horizontally */
-    text-align: center; /* Ensures the text is centered inside the container */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
     flex-direction: column;
     margin: 10px;
 }
 
 table {
-    margin: 0 auto; /* Ensures fallback horizontal centering */
-    border-spacing: 10px; /* Optional: Adds spacing between table cells */
+    margin: 0 auto; 
+    border-spacing: 10px; 
     text-align: left;
 }
 
 
 .resume-container{
-    display: flex; /* Enables flexbox for centering */
-    align-items: center; /* Centers content vertically */
-    justify-content: center; /* Centers content horizontally */
-    text-align: center; /* Ensures the text is centered inside the container */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
     flex-direction: column;
     padding: 10px;
 }
@@ -425,7 +455,7 @@ table {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -437,7 +467,7 @@ table {
 }
 
 .search-container {
-    background: white;
+    background: rgb(39, 39, 39);
     border-radius: 10px;
     padding: 20px;
     text-align: center;
@@ -446,6 +476,7 @@ table {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Search input styling */
 #search-input {
     width: 100%;
     padding: 10px;
@@ -455,74 +486,81 @@ table {
     margin-bottom: 20px;
 }
 
+/* Search results styling */
 #search-results {
     text-align: left;
     max-height: 300px;
     overflow-y: auto;
 }
 
+/* Individual search result link */
 #search-results a {
     display: block;
     padding: 10px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
+    background: rgb(39, 39, 39);
+    border: 1px solid rgb(39, 39, 39);
     border-radius: 5px;
     margin-bottom: 10px;
     text-decoration: none;
-    color: black;
-    transition: background 0.2s;
+    color: rgb(255, 255, 255);
 }
 
+/* Hover effect for search results */
 #search-results a:hover {
-    background: #efefef;
+    background: #474747;
 }
 
 
 /* ========================================
    Project Card Styles
 ========================================== */
-.project-card {
-    background-color: #1c1c1c;
+.project-card-search {
+    display: flex; 
+    align-items: center; 
+    background-color: #414141;
+    margin: 20px;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease-in-out;
-    padding: 10px;
-    margin: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+    text-decoration: none; 
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
+.project-card-search:hover {
+    transform: scale(1.05); 
 }
 
-.project-card img {
-    width: 100%;
-    height: auto;
+.project-card-search img {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    margin-right: 20px; 
 }
 
-.project-card .card-body {
-    padding: 15px;
-    color: white;
+.card-body {
+    flex: 1; 
 }
 
-.project-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.project-card p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    color: #ccc;
-}
-
-.project-card a {
-    color: #00bcd4;
-    text-decoration: none;
+.card-body h3 {
+    margin: 0 0 10px; 
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
-.project-card a:hover {
-    text-decoration: underline;
+.card-body p {
+    margin: 0;
+    color: rgb(255, 255, 255);
+}
+
+.card-body a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+.card-body a:hover {
+    text-decoration: underline; 
 }
