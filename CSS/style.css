@@ -415,3 +415,114 @@ table {
 .pdf-canvas{
     border: solid 2px black;
 }
+
+
+
+/* Search Overlay */
+#search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#search-overlay.hidden {
+    display: none;
+}
+
+.search-container {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#search-results {
+    text-align: left;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#search-results a {
+    display: block;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: black;
+    transition: background 0.2s;
+}
+
+#search-results a:hover {
+    background: #efefef;
+}
+
+
+/* ========================================
+   Project Card Styles
+========================================== */
+.project-card {
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    padding: 10px;
+    margin: 12px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+}
+
+.project-card .card-body {
+    padding: 15px;
+    color: white;
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.project-card a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
