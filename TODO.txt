@@ -1,4 +1,3 @@
-bright/dark mode not presistent 
 header height jumps from 32 to 27 and then to 30
 fill with content
     home
