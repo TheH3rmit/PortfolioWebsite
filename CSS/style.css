@@ -24,24 +24,27 @@ body {
     color: white;
     width: 100%;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    margin: 0;
 }
 
 header {
     position: sticky;
     background-color: rgb(26, 26, 26);
-    top: 0;
-    padding: 10px 0;
+    padding: 10px 0px;
     width: 100%;
     clear: both;
     overflow: hidden;
     z-index: 999;
     background-attachment: fixed;
     font-weight: 600;
+    flex-shrink: 0;
 }
 
 header.expanded {
     height: auto;
-    padding: 10px 0;
 }
 
 
@@ -51,6 +54,7 @@ footer {
     clear: both;
     text-align: center;
     font-size: 0.8rem;
+    flex-shrink: 0;
 }
 
 /* ========================================
@@ -68,6 +72,42 @@ footer {
 
 .main-body{
     margin: 20px;
+
+    align-content: center;
+    flex: 1
+}
+
+.article-main{
+    display: flex; 
+    align-content: center;
+    align-items: center;
+    justify-content: center; 
+    text-align: left; 
+    flex-direction: column;
+    margin: 10px;
+    
+}
+
+.article{
+    display: flex; 
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center; 
+    text-align: left; 
+    flex-direction: column;
+    margin: 10px;
+    
+}
+
+.article-text{
+    display: flex; 
+    align-content: left;
+    align-items: left; 
+    justify-content: left; 
+    text-align: left; 
+    flex-direction: column;
+    padding-left: 10px;
+
 }
 
 /* ========================================
@@ -87,6 +127,7 @@ footer {
     align-items: center;
     width: 100%;
     gap: 10px;
+    justify-content: center
 
 }
 
@@ -226,7 +267,7 @@ a {
 ========================================== */
 @media (max-width: 768px) {
     header {
-        height: 50px;
+        height: 60px;
     }
 
     #navigation-list-desktop {
@@ -567,4 +608,24 @@ table {
 
 .card-body a:hover {
     text-decoration: underline; 
+}
+
+
+.article img,
+.article iframe {
+    width: 100%; 
+    height: auto; 
+    max-width: 100%; 
+    padding: 10px; 
+}
+
+
+.article iframe,
+.article img {
+    max-width: 1020px; 
+}
+
+
+.article iframe {
+    aspect-ratio: 16 / 9; 
 }
