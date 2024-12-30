@@ -56,6 +56,9 @@ footer {
     font-size: 0.8rem;
     flex-shrink: 0;
 }
+.article p{
+     margin-bottom: 20px;
+}
 
 /* ========================================
    Layout and Container Styles

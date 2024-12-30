@@ -1,7 +1,8 @@
-mobile scaling for the search
+add additional div for the main-page-text etc so it is like more on the a4 page 
 
 fill with content
     home
     about
     projects
 
+clean up the css  html js
