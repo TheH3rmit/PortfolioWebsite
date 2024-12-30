@@ -79,7 +79,9 @@ document.addEventListener("DOMContentLoaded", () => {
     function createProjectCard(title, imgSrc, description, link) {
         return `
             <div class="project-card-search">
-                <img src="${imgSrc}" alt="${title}">
+                <div class="card-body-image">
+                    <img src="${imgSrc}" alt="${title}">
+                </div>
                 <div class="card-body">
                     <h3>${title}</h3>
                     <p>${description}</p>

@@ -91,23 +91,25 @@ footer {
 .article{
     display: flex; 
     align-content: center;
-    align-items: flex-start;
     justify-content: center; 
     text-align: left; 
     flex-direction: column;
     margin: 10px;
     
 }
+.media{
+    align-self: center;
+}
 
 .article-text{
     display: flex; 
+    align-self: left;
     align-content: left;
     align-items: left; 
     justify-content: left; 
     text-align: left; 
     flex-direction: column;
     padding-left: 10px;
-
 }
 
 /* ========================================
@@ -516,7 +518,7 @@ table {
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    width: 80%;
+    width: 95%;
     max-width: 600px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -534,7 +536,7 @@ table {
 /* Search results styling */
 #search-results {
     text-align: left;
-    max-height: 300px;
+    max-height: calc(100vh - 100px); 
     overflow-y: auto;
 }
 
@@ -576,12 +578,13 @@ table {
     transform: scale(1.05); 
 }
 
-.project-card-search img {
-    width: 150px; 
-    height: 150px; 
-    object-fit: cover; 
-    border-radius: 8px; 
-    margin-right: 20px; 
+.card-body-image img {
+    height: auto; /* Maintains aspect ratio */
+    width: 100px; /* Ensures it doesn't grow larger than 150px */
+    height: 100px; /* Ensures it doesn't grow taller than 150px */
+    object-fit: cover; /* Keeps the image properly cropped */
+    border-radius: 8px; /* Smooth corners */
+    margin-right: 20px; /* Space between the image and text */
 }
 
 .card-body {
@@ -611,8 +614,8 @@ table {
 }
 
 
-.article img,
-.article iframe {
+.media img,
+.media iframe {
     width: 100%; 
     height: auto; 
     max-width: 100%; 
@@ -620,12 +623,12 @@ table {
 }
 
 
-.article iframe,
-.article img {
+.media iframe,
+.media img {
     max-width: 1020px; 
 }
 
 
-.article iframe {
+.media iframe {
     aspect-ratio: 16 / 9; 
 }
