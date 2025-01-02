@@ -1,4 +1,6 @@
 add additional div for the main-page-text etc so it is like more on the a4 page/ centering the text in a4 page or smth
 
 search funcion does not work in other pages then index
+add videos to projects#
+bright/night mode is wrong on bright mode 
 clean up the css  html js
