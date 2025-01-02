@@ -1,8 +1,4 @@
-add additional div for the main-page-text etc so it is like more on the a4 page 
+add additional div for the main-page-text etc so it is like more on the a4 page/ centering the text in a4 page or smth
 
-fill with content
-    home
-    about
-    projects
-
+search funcion does not work in other pages then index
 clean up the css  html js
