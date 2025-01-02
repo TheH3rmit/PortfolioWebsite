@@ -114,6 +114,19 @@ footer {
     flex-direction: column;
     padding-left: 10px;
 }
+.article-text {
+    text-align: left; 
+    padding-left: 10px; 
+}
+
+.article-text ul {
+    list-style: disc; 
+    margin-left: 20px; 
+    padding-left: 0; 
+}
+.article-text ol {
+    margin-left: 20px; 
+}
 
 /* ========================================
    Name Section Styles
