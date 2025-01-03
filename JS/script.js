@@ -98,10 +98,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (query) {
             const projectFiles = [
-                { path: './Files/Projects/project1.html', title: 'Project 1', image: './Files/Pictures/test1.jpg', description: 'A brief description of Project 1.' },
-                { path: './Files/Projects/project2.html', title: 'Project 2', image: './Files/Pictures/test1.jpg', description: 'A brief description of Project 2.' },
-                { path: './Files/Projects/project3.html', title: 'Project 3', image: './Files/Pictures/test1.jpg', description: 'A brief description of Project 3.' },
-                // Add more projects here as needed
+                { path: './Files/Projects/project1.html', title: '2D Dungeon Generator', image: './Files/Pictures/Projekt1.jpg', description: 'D dungeon generator using BSP algorithm made in Godot using GDScript.' },
+                { path: './Files/Projects/project2.html', title: 'Maze Dive', image: './Files/Pictures/Projekt2.jpg', description: 'Maze Dive is a low-poly, 3D first-person shooter (FPS) roguelike game made in Unity.' },
+                { path: './Files/Projects/project3.html', title: 'Sulfur Bishop', image: './Files/Pictures/WIPFullHD.jpg', description: '2D top down action game - WORK IN PROGRESS.' },
             ];
 
             // Filter and create cards for matching projects

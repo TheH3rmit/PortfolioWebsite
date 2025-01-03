@@ -426,21 +426,34 @@ body.bright-mode .search-container {
 
 body.bright-mode #search-input {
     background: #ffffff; 
-    color: rgb(255, 255, 255); 
-    border: 1px solid #ccc; 
+    color: rgb(0, 0, 0); 
+    border: 1px solid #000000; 
 }
 
 body.bright-mode #search-results a {
-    background: #575757; 
-    color: rgb(255, 255, 255); 
+    background: #ececec; 
+    color: rgb(0, 0, 0); 
 }
 
 body.bright-mode #search-results a:hover {
-    background: #777777; 
+    background: #cfcfcf; 
 }
 
 body.bright-mode .project-card-search{
-    background-color: #000000;
+    background-color: #ececec;
+}
+
+body.bright-mode .card-body p{
+    color: #000000;
+}
+
+body.bright-mode #navigation-list-mobile li:hover, 
+body.bright-mode #navigation-list-mobile li:focus {
+    background-color: rgb(212, 212, 212); 
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+    outline: none; 
 }
 
 
