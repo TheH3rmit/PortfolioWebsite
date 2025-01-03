@@ -69,26 +69,11 @@
         </div>
     </footer>
     
-    <script>
-        // Contact form validation and submission logic
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); 
-
-            // Get values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            // Validation check
-            if (name && email && message) {
-                // Display success
-                document.getElementById('formFeedback').innerHTML = "<p class='success'>Your message has been sent successfully!</p>";
-                document.getElementById('contactForm').reset();  // Reset form 
-            } else {
-                // Display fail 
-                document.getElementById('formFeedback').innerHTML = "<p class='error'>Please fill in all fields.</p>";
-            }
-        });
-    </script>
+    <div id="search-overlay" class="hidden">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search projects..." autofocus>
+            <div id="search-results"></div>
+        </div>
+    </div>
 </body>
 </html>

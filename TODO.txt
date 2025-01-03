@@ -1,11 +1,6 @@
 add additional div for the main-page-text etc so it is like more on the a4 page/ centering the text in a4 page or smth
 
-search funcion does not work in other pages then index
-    Uncaught TypeError: document.getElementById(...) is null
-    <anonymous> http://127.0.0.1:5500/Zadanie/PortfolioWebsite/contact.html:74 contact.html:74:18
-    Uncaught TypeError: searchOverlay is null
-    <anonymous> http://127.0.0.1:5500/Zadanie/PortfolioWebsite/JS/script.js:62
-    EventListener.handleEvent* http://127.0.0.1:5500/Zadanie/PortfolioWebsite/JS/script.js:1
+fix issues from consloe - connected to the iframes yt videos in project 1 and 2 deleted for now 
 
 add videos to projects#
 bright/night mode is wrong on bright mode 
