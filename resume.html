@@ -82,36 +82,5 @@
             <div id="search-results"></div>
         </div>
     </div>
-
-    <script>
-        // Path to your PDF file
-        const url = './Files/Jakub_Resume-2.pdf';
-
-        // Get the canvas element
-        const canvas = document.querySelector('.pdf-canvas');
-        const context = canvas.getContext('2d');
-
-        // Load the PDF document using PDF.js
-        pdfjsLib.getDocument(url).promise.then(pdf => {
-            // Get the first page of the PDF
-            pdf.getPage(1).then(page => {
-                // Set up the scale (zoom level) for rendering the page
-                const scale = 1;  // Adjust scale for desired zoom level
-                const viewport = page.getViewport({ scale: scale });
-
-                // Set the canvas size to match the PDF page size
-                canvas.width = viewport.width;
-                canvas.height = viewport.height;
-
-                // Render the page on the canvas
-                page.render({
-                    canvasContext: context,
-                    viewport: viewport
-                });
-            });
-        }).catch(error => {
-            console.error('Error loading PDF:', error);
-        });
-    </script>
 </body>
 </html>
