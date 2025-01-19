@@ -163,9 +163,6 @@ footer {
 }
 
 /* Desktop Nav */
-.main-nav-list-desktop {
-    /* Shown/hidden by JS */
-}
 #navigation-list-desktop {
     list-style: none;
     display: flex;
