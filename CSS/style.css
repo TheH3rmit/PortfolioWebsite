@@ -1,156 +1,159 @@
 /* ========================================
-   General Reset and Base Styles
+   1. RESET & BASE STYLES
 ========================================== */
+
 * {
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+                 "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ========================================
-   Dynamic Font Sizing
-========================================== */
 html {
     font-size: clamp(14px, 2vw, 20px);
-    
 }
 
 /* ========================================
-   Body and Header Styles
+   2. GLOBAL LAYOUT (BODY, HEADER, FOOTER)
 ========================================== */
+
 body {
-    background-color: black;
-    color: white;
-    width: 100%;
-    line-height: 1.6;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
+    min-height: 100vh;
     margin: 0;
+    width: 100%;
+    line-height: 1.6;
+    background-color: black;
+    color: white;
 }
 
+/* Header */
 header {
     position: sticky;
-    background-color: rgb(26, 26, 26);
-    padding: 10px 0px;
+    top: 0;
     width: 100%;
+    padding: 10px 0;
     clear: both;
     overflow: hidden;
     z-index: 999;
+    background-color: rgb(26, 26, 26);
     background-attachment: fixed;
     font-weight: 600;
     flex-shrink: 0;
 }
-
 header.expanded {
     height: auto;
 }
 
-
+/* Footer */
 footer {
-    background-color: rgb(26, 26, 26);
     width: 100%;
     clear: both;
     text-align: center;
     font-size: 0.8rem;
     flex-shrink: 0;
-}
-.article p{
-     margin-bottom: 20px;
+    background-color: rgb(26, 26, 26);
 }
 
 /* ========================================
-   Layout and Container Styles
+   3. CONTAINERS & SECTIONS
 ========================================== */
+
+/* Main Body */
+.main-body {
+    margin: 20px;
+    align-content: center;
+    flex: 1;
+}
+
+/* Article Sections */
+.article-main {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center; 
+    text-align: left; 
+    flex-direction: column;
+    margin: 10px;
+}
+.article {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: left;
+    margin: 10px;
+}
+
+.media {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Article Text */
+.article-text {
+    text-align: left;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-self: left; /* or flex-start */
+    align-items: flex-start; 
+    justify-content: flex-start;
+}
+
+/* Paragraphs in .article */
+.article p {
+    margin-bottom: 20px;
+}
+
+/* Lists inside .article-text */
+.article-text ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+.article-text ol {
+    margin-left: 20px;
+}
+
+/* ========================================
+   4. CONTAINER UTILITY STYLES
+========================================== */
+
 .container {
     position: relative;
-    color: white;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
-}
-
-.main-body{
-    margin: 20px;
-
-    align-content: center;
-    flex: 1
-}
-
-.article-main{
-    display: flex; 
-    align-content: center;
-    align-items: center;
-    justify-content: center; 
-    text-align: left; 
-    flex-direction: column;
-    margin: 10px;
-    
-}
-
-.article{
-    display: flex; 
-    align-content: center;
-    justify-content: center; 
-    text-align: left; 
-    flex-direction: column;
-    margin: 10px;
-    
-}
-.media{
-    display: flex; 
-    align-items: center; 
-    flex-direction: column;
-}
-
-.article-text{
-    display: flex; 
-    align-self: left;
-    align-content: left;
-    align-items: left; 
-    justify-content: left; 
-    text-align: left; 
-    flex-direction: column;
-    padding-left: 10px;
-}
-.article-text {
-    text-align: left; 
-    padding-left: 10px; 
-}
-
-.article-text ul {
-    list-style: disc; 
-    margin-left: 20px; 
-    padding-left: 0; 
-}
-.article-text ol {
-    margin-left: 20px; 
+    color: white;
 }
 
 /* ========================================
-   Name Section Styles
+   5. NAVIGATION STYLES
 ========================================== */
+
+/* Name Section */
 .name {
     flex-shrink: 0;
     font-size: 1rem;
 }
 
-/* ========================================
-   Top Navigation Styles
-========================================== */
+/* Top Navigation */
 .top-navigation {
     display: flex;
-    color: white;
     align-items: center;
     width: 100%;
     gap: 10px;
-    justify-content: center
-
+    justify-content: center; /* Centers content within top-navigation */
+    color: white;
 }
 
+/* Main Nav */
 .main-nav {
     flex-grow: 1;
     display: flex;
@@ -159,79 +162,78 @@ footer {
     position: relative;
 }
 
-.main-nav-list-mobile{
-    flex-grow: 1;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: none;
+/* Desktop Nav */
+.main-nav-list-desktop {
+    /* Shown/hidden by JS */
 }
-
 #navigation-list-desktop {
     list-style: none;
     display: flex;
     gap: 1rem;
 }
-
 #navigation-list-desktop li {
-    margin: 0;
     appearance: none;
     box-sizing: border-box;
     cursor: pointer;
     display: inline-block;
     border-radius: 15px;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     font-size: 16px;
     font-weight: 600;
     line-height: normal;
-    margin: 0;
+    margin: 0; /* Overrides default margin if any */
     min-height: 30px;
-    min-width: 0;
-    outline: none;
     padding: 8px 12px;
     text-align: center;
     text-decoration: none;
     transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
     user-select: none;
-    -webkit-user-select: none;
     touch-action: manipulation;
     will-change: transform;
 }
 
-
-
+/* Desktop Nav Hover/Active */
 #navigation-list-desktop li:hover, 
 #navigation-list-desktop li:focus {
-    background-color: rgb(51, 51, 51); 
+    background-color: rgb(51, 51, 51);
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
-    outline: none; 
+    outline: none;
 }
-
 #navigation-list-desktop li:active {
     box-shadow: none;
     transform: translateY(0);
 }
 
+/* Mobile Nav */
+.main-nav-list-mobile {
+    flex-grow: 1;
+    position: relative;
+    display: none; /* Shown/hidden by JS */
+    align-items: center;
+    justify-content: center;
+}
 #navigation-list-mobile {
     list-style: none;
     display: flex;
     gap: 1rem;
 }
-
 #navigation-list-mobile li {
     margin: 0;
 }
 
+/* Links (Global) */
 a {
     text-decoration: none;
     color: white;
     font-size: inherit;
 }
 
-/* Theme Toggle Button */
+/* ========================================
+   6. BUTTONS & TOGGLES
+========================================== */
+
+/* Theme Toggle */
 .theme-toggle {
     background: none;
     border: none;
@@ -239,10 +241,11 @@ a {
     cursor: pointer;
     font-size: 1rem;
     display: flex;
-
     justify-content: center;
     align-items: center;
 }
+
+/* Search Button */
 .search-button {
     background: none;
     border: none;
@@ -251,24 +254,21 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20px; /* Match the dimensions of the theme button */
+    width: 20px; /* Match dimensions of the theme button */
     height: 20px;
 }
-
 .search-button i {
-    font-size: 1rem; /* Ensure the icon matches the desired size */
+    font-size: 1rem;
     width: 20px;
     height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-#div-search-button{
+#div-search-button {
     margin: 10px;
 }
-
-#div-theme-toggle{
+#div-theme-toggle {
     margin: 10px;
 }
 
@@ -283,13 +283,15 @@ a {
 }
 
 /* ========================================
-   Responsive Styles
+   7. RESPONSIVE MEDIA QUERIES
 ========================================== */
+
 @media (max-width: 768px) {
     header {
         height: 60px;
     }
 
+    /* Desktop Nav hidden, switch to mobile Nav */
     #navigation-list-desktop {
         display: none;
         flex-direction: column;
@@ -297,7 +299,6 @@ a {
         text-align: center;
         width: 100%;
     }
-
     #navigation-list-mobile {
         display: none;
         flex-direction: column;
@@ -306,15 +307,15 @@ a {
         width: 100%;
         margin: 10px;
     }
-
     #navigation-list-mobile li {
-        margin: 0;
         appearance: none;
         box-sizing: border-box;
         cursor: pointer;
         display: inline-block;
         border-radius: 15px;
-        font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-family: Roobert, -apple-system, BlinkMacSystemFont,
+                     "Segoe UI", Helvetica, Arial, sans-serif,
+                     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         font-size: 16px;
         font-weight: 600;
         line-height: normal;
@@ -331,163 +332,157 @@ a {
         touch-action: manipulation;
         will-change: transform;
     }
-    
-    
-    
     #navigation-list-mobile li:hover, 
     #navigation-list-mobile li:focus {
-        background-color: rgb(51, 51, 51); 
+        background-color: rgb(51, 51, 51);
         border-radius: 15px;
         box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
         transform: translateY(-2px);
-        outline: none; 
+        outline: none;
     }
-    
     #navigation-list-desktop li:active {
         box-shadow: none;
         transform: translateY(0);
     }
-
     header.expanded #navigation-list-mobile {
         display: flex;
     }
-
     header.expanded .main-nav-list-mobile {
         display: flex;
     }
 
-
+    /* Show hamburger in mobile view */
     .hamburger {
         display: block;
     }
 
+    /* Center the nav in mobile */
     .main-nav {
         justify-content: center;
     }
 
+    /* Rescale text and footer */
     body {
         font-size: 0.7rem;
     }
-
     footer {
         font-size: 0.7rem;
     }
-    canvas{
+
+    /* Canvas or other elements can be 100% wide in mobile */
+    canvas {
         width: 100%;
     }
 }
 
 /* ========================================
-   Dark Mode Styles
+   8. DARK MODE STYLES
 ========================================== */
+
 body.bright-mode {
     background-color: white;
     color: black;
 }
 
+/* Hover states in bright-mode */
 body.bright-mode #navigation-list-desktop li:hover,
 body.bright-mode #navigation-list-desktop li:focus {
-    background-color: rgb(240, 240, 240);  
+    background-color: rgb(240, 240, 240);
+}
+body.bright-mode #navigation-list-mobile li:hover, 
+body.bright-mode #navigation-list-mobile li:focus {
+    background-color: rgb(212, 212, 212);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+    outline: none;
 }
 
-body.bright-mode .button-main-body{
+/* Buttons in bright-mode */
+body.bright-mode .button-main-body {
     background-color: rgb(240, 240, 240);
     color: black;
 }
 
+/* Header & Footer in bright-mode */
 body.bright-mode header,
 body.bright-mode footer {
     background-color: #e9e9e9;
     color: black;
 }
 
+/* Links in bright-mode */
 body.bright-mode a {
     color: black;
 }
 
+/* Other bright-mode elements */
 body.bright-mode .name,
 body.bright-mode .view-mode,
 body.bright-mode .hamburger,
 body.bright-mode .search-button,
-body.bright-mode .theme-toggle,
-body.bright-mode .search-button  {
+body.bright-mode .theme-toggle {
     color: black;
 }
 
-
+/* Search Overlay in bright-mode */
 body.bright-mode #search-overlay {
-    background: rgba(255, 255, 255, 0.9); 
+    background: rgba(255, 255, 255, 0.9);
 }
-
 body.bright-mode .search-container {
-    background: rgb(255, 255, 255); 
-    color: rgb(0, 0, 0); 
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
-
 body.bright-mode #search-input {
-    background: #ffffff; 
-    color: rgb(0, 0, 0); 
-    border: 1px solid #000000; 
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 1px solid #000000;
 }
-
 body.bright-mode #search-results a {
-    background: #ececec; 
-    color: rgb(0, 0, 0); 
+    background: #ececec;
+    color: rgb(0, 0, 0);
 }
-
 body.bright-mode #search-results a:hover {
-    background: #cfcfcf; 
+    background: #cfcfcf;
 }
-
-body.bright-mode .project-card-search{
+body.bright-mode .project-card-search {
     background-color: #ececec;
 }
-
-body.bright-mode .card-body p{
-    color: #000000;
+body.bright-mode .card-body p {
+    color: #000;
 }
-
-body.bright-mode #navigation-list-mobile li:hover, 
-body.bright-mode #navigation-list-mobile li:focus {
-    background-color: rgb(212, 212, 212); 
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-    outline: none; 
-}
-
 
 /* ========================================
-   To Organize 
+   9. MISCELLANEOUS STYLES
 ========================================== */
 
+/* Tables */
 table {
-    margin: 0 auto; 
-    border-spacing: 10px; 
+    margin: 0 auto;
+    border-spacing: 10px;
     text-align: left;
 }
 
-
-.resume-container{
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    text-align: center; 
+/* Resume Container */
+.resume-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     flex-direction: column;
     padding: 10px;
 }
 
-
-.button-main-body{
+/* Button Base Style */
+.button-main-body {
     appearance: none;
-    background-color: rgb(26, 26, 26);    
+    background-color: rgb(26, 26, 26);
     border: 2px solid rgb(82, 82, 82);
     border-radius: 15px;
     box-sizing: border-box;
-    color: #FFFFFF;
+    color: #fff;
     cursor: pointer;
     display: inline-block;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     font-size: 16px;
     font-weight: 600;
     line-height: normal;
@@ -500,44 +495,42 @@ table {
     text-decoration: none;
     transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
     user-select: none;
-    -webkit-user-select: none;
     touch-action: manipulation;
     will-change: transform;
 }
-
-.button-main-body:hover{
+.button-main-body:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
 }
-.button-main-body:active{
+.button-main-body:active {
     box-shadow: none;
     transform: translateY(0);
 }
 
-.pdf-canvas{
+/* PDF Canvas */
+.pdf-canvas {
     border: solid 2px black;
 }
 
+/* ========================================
+   10. SEARCH OVERLAY
+========================================== */
 
-
-/* Search Overlay */
 #search-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); 
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
 }
-
 #search-overlay.hidden {
     display: none;
 }
-
 .search-container {
     background: rgb(39, 39, 39);
     border-radius: 10px;
@@ -548,47 +541,46 @@ table {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Search input styling */
+/* Search Input */
 #search-input {
     width: 100%;
     padding: 10px;
+    margin-bottom: 20px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 20px;
 }
 
-/* Search results styling */
+/* Search Results Container */
 #search-results {
     text-align: left;
-    max-height: calc(100vh - 100px); 
+    max-height: calc(100vh - 100px);
     overflow-y: auto;
 }
 
-/* Individual search result link */
+/* Individual Search Result */
 #search-results a {
     display: block;
     padding: 10px;
+    margin-bottom: 10px;
     background: rgb(39, 39, 39);
     border: 1px solid rgb(39, 39, 39);
     border-radius: 5px;
-    margin-bottom: 10px;
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
-
-/* Hover effect for search results */
 #search-results a:hover {
     background: #474747;
 }
 
-
 /* ========================================
-   Project Card Styles
+   11. PROJECT CARD STYLES
 ========================================== */
+
+/* Card Search */
 .project-card-search {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     background-color: #414141;
     margin: 20px;
     padding: 20px;
@@ -596,72 +588,64 @@ table {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     cursor: pointer;
-    text-decoration: none; 
+    text-decoration: none;
 }
-
 .project-card-search:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
+/* Image in Card Body */
 .card-body-image img {
-    height: auto; /* Maintains aspect ratio */
-    width: 100px; /* Ensures it doesn't grow larger than 150px */
-    height: 100px; /* Ensures it doesn't grow taller than 150px */
-    object-fit: cover; /* Keeps the image properly cropped */
-    border-radius: 8px; /* Smooth corners */
-    margin-right: 20px; /* Space between the image and text */
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
 }
 
+/* Card Body */
 .card-body {
-    flex: 1; 
+    flex: 1;
 }
-
 .card-body h3 {
-    margin: 0 0 10px; 
+    margin: 0 0 10px;
     font-size: 1.5rem;
     font-weight: bold;
 }
-
 .card-body p {
     margin: 0;
     color: rgb(255, 255, 255);
 }
-
 .card-body a {
     display: inline-block;
     margin-top: 10px;
-    text-decoration: none; 
+    text-decoration: none;
     font-weight: bold;
 }
-
 .card-body a:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
-
+/* Media elements (Images, Iframes) */
 .media img,
 .media iframe {
-    width: 100%; 
-    height: auto; 
-    max-width: 100%; 
-    padding: 10px; 
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    padding: 10px;
 }
-
-
 .media iframe,
 .media img {
-    max-width: 1020px; 
+    max-width: 1020px;
 }
-
-
 .media iframe {
-    aspect-ratio: 16 / 9; 
+    aspect-ratio: 16 / 9;
 }
 
-
+/* Projects Grid */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
 }
