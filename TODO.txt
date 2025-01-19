@@ -1,7 +1,0 @@
-add additional div for the main-page-text etc so it is like more on the a4 page/ centering the text in a4 page or smth
-
-fix issues from consloe - connected to the iframes yt videos in project 1 and 2 deleted for now 
-
-add videos to projects#
-bright/night mode is wrong on bright mode 
-clean up the css  html js

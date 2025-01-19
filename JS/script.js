@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Path to your PDF file
-  const url = "./Files/Jakub_Resume-2.pdf";
+  const url = "./Files/PDF/Jakub_Resume-3.pdf";
 
   // Get the canvas element
   const canvas = document.querySelector(".pdf-canvas");
