@@ -99,7 +99,7 @@ footer {
     padding-left: 10px;
     display: flex;
     flex-direction: column;
-    align-self: left; /* or flex-start */
+    align-self: left;
     align-items: flex-start; 
     justify-content: flex-start;
 }
@@ -149,7 +149,7 @@ footer {
     align-items: center;
     width: 100%;
     gap: 10px;
-    justify-content: center; /* Centers content within top-navigation */
+    justify-content: center; 
     color: white;
 }
 
@@ -177,7 +177,7 @@ footer {
     font-size: 16px;
     font-weight: 600;
     line-height: normal;
-    margin: 0; /* Overrides default margin if any */
+    margin: 0; 
     min-height: 30px;
     padding: 8px 12px;
     text-align: center;
@@ -206,7 +206,7 @@ footer {
 .main-nav-list-mobile {
     flex-grow: 1;
     position: relative;
-    display: none; /* Shown/hidden by JS */
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -251,7 +251,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20px; /* Match dimensions of the theme button */
+    width: 20px; 
     height: 20px;
 }
 .search-button i {
